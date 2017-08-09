@@ -141,6 +141,7 @@ class ViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail"{
             
+            
             if let indexPath = self.tableView.indexPathForSelectedRow{
                 
                 let selectedPlace = self.places[indexPath.row]
