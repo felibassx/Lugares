@@ -19,6 +19,7 @@
 		A96168261F3949B500E2FB27 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96168251F3949B500E2FB27 /* Place.swift */; };
 		A96168291F395FC600E2FB27 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96168281F395FC600E2FB27 /* MapKit.framework */; };
 		A961682B1F3961EC00E2FB27 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A961682A1F3961EC00E2FB27 /* MapViewController.swift */; };
+		A99E5E321F3BDF0100724D1D /* AddPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99E5E311F3BDF0100724D1D /* AddPlaceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		A96168251F3949B500E2FB27 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		A96168281F395FC600E2FB27 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A961682A1F3961EC00E2FB27 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A99E5E311F3BDF0100724D1D /* AddPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlaceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				A96168171F39469800E2FB27 /* Info.plist */,
 				A96168251F3949B500E2FB27 /* Place.swift */,
 				A961682A1F3961EC00E2FB27 /* MapViewController.swift */,
+				A99E5E311F3BDF0100724D1D /* AddPlaceViewController.swift */,
 			);
 			path = Lugares;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				A961681E1F3948AF00E2FB27 /* PlaceCell.swift in Sources */,
 				A961680E1F39469800E2FB27 /* ViewController.swift in Sources */,
 				A96168241F39497800E2FB27 /* ReviewViewController.swift in Sources */,
+				A99E5E321F3BDF0100724D1D /* AddPlaceViewController.swift in Sources */,
 				A96168231F39497800E2FB27 /* PlaceDetailViewCell.swift in Sources */,
 				A961680C1F39469800E2FB27 /* AppDelegate.swift in Sources */,
 				A96168261F3949B500E2FB27 /* Place.swift in Sources */,
@@ -345,6 +349,7 @@
 				A961681C1F39469800E2FB27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

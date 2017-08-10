@@ -170,7 +170,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hee-hL-xyk">
-                                <rect key="frame" x="309" y="72" width="50" height="50"/>
+                                <rect key="frame" x="309" y="28" width="50" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.65290979940000005" blue="0.28083714879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="5T0-Eb-C2F"/>
@@ -338,10 +338,10 @@
             </objects>
             <point key="canvasLocation" x="1861.875" y="-49.647887323943664"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Add Place View Controller-->
         <scene sceneID="JlH-ND-cXs">
             <objects>
-                <tableViewController id="NoP-WG-8Ac" sceneMemberID="viewController">
+                <tableViewController id="NoP-WG-8Ac" customClass="AddPlaceViewController" customModule="Lugares" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bdv-yf-3t0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -591,6 +591,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="PvP-hc-bM1"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="hBG-MG-rE5" id="qyL-lA-c9q"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u5s-pp-6bl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Dud-h7-y1t" userLabel="Exit" sceneMemberID="exit"/>
