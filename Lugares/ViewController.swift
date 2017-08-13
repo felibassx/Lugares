@@ -155,6 +155,17 @@ class ViewController: UITableViewController {
     
     @IBAction func unwindToMainViewController(segue: UIStoryboardSegue){
         
+        if segue.identifier == "unwindToMainViewController"{
+            
+            if let addPlaceVC = segue.source as? AddPlaceViewController{
+                
+                if let newPlace = addPlaceVC.place{
+                    self.places.append(newPlace)
+                    self.tableView.reloadData()
+                }
+                
+            }
+        }
     }
     
     

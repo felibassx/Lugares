@@ -619,7 +619,7 @@
                     <navigationItem key="navigationItem" id="WIR-LI-0N5">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="3cx-hj-2Ij">
                             <connections>
-                                <segue destination="Dud-h7-y1t" kind="unwind" unwindAction="unwindToMainViewControllerWithSegue:" id="v3l-hs-mYS"/>
+                                <segue destination="Dud-h7-y1t" kind="unwind" identifier="unwindToMainViewController" unwindAction="unwindToMainViewControllerWithSegue:" id="v3l-hs-mYS"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="PvP-hc-bM1">

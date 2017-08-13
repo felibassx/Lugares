@@ -25,6 +25,9 @@ class AddPlaceViewController: UITableViewController, UIImagePickerControllerDele
 
     var rating : String?
     
+    var place : Place?
+
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,19 +53,67 @@ class AddPlaceViewController: UITableViewController, UIImagePickerControllerDele
     }
     
     
+    //boton guardar
     @IBAction func savePressed(_ sender: UIBarButtonItem) {
+        
+        if let name = self.textViewName.text,
+                    let type = self.textViewType.text,
+                    let direction = self.textViewDirection.text,
+                    let telephone = self.textViewTelephone.text,
+                    let website = self.textViewWebsite.text,
+                    let theImage = self.imageView.image,
+                    let rating = self.rating{
+        
+            self.place = Place(name: name, type: type, location: direction, telephone: telephone, website: website, image: theImage)
+            
+            self.place!.rating = rating
+            print(self.place!.name)
+            
+            self.performSegue(withIdentifier: "unwindToMainViewController", sender: self)
+            
+            
+        }else{
+            let alertController = UIAlertController(title: "Falta algún parametro", message: "Debes completar todos los campos", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            
+            alertController.addAction(okAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+            
+            
+            
+            
+        }
     }
     
     //action rating
+    let defaultColor = UIColor(red: 255.0/255.0, green: 165.0/255.0, blue: 70.0/255.0, alpha: 1.0)
+    let selectedColor = UIColor.green
     @IBAction func ratingPressed(_ sender: UIButton) {
         
         switch sender.tag {
         case 1:
             self.rating = "good"
+            
+            self.firstButton.backgroundColor = selectedColor
+            self.secondButton.backgroundColor = defaultColor
+            self.thirdButton.backgroundColor = defaultColor
+            
         case 2:
             self.rating = "dislike"
+            
+            self.firstButton.backgroundColor = defaultColor
+            self.secondButton.backgroundColor = selectedColor
+            self.thirdButton.backgroundColor = defaultColor
+            
         case 3:
             self.rating = "great"
+            
+            self.firstButton.backgroundColor = defaultColor
+            self.secondButton.backgroundColor = defaultColor
+            self.thirdButton.backgroundColor = selectedColor
+            
         default:
             break
         }
@@ -124,6 +175,7 @@ class AddPlaceViewController: UITableViewController, UIImagePickerControllerDele
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
