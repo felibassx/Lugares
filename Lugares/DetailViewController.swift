@@ -22,7 +22,7 @@ class DetailViewController: UIViewController {
         
         self.title = place.name
 
-        self.placeImageView.image = self.place.image
+        self.placeImageView.image = UIImage(data: self.place.image! as Data)
         
         //modificar la apariencia de la tabla
         self.tableView.backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 0.25)
@@ -33,7 +33,7 @@ class DetailViewController: UIViewController {
         self.tableView.estimatedRowHeight = 44.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
-        let image = UIImage(named: self.place.rating)
+        let image = UIImage(named: self.place.rating!)
         self.ratingButton.setImage(image, for: .normal)
 
     }
@@ -62,7 +62,7 @@ class DetailViewController: UIViewController {
                 
                 self.place.rating = rating
                 
-                let image = UIImage(named: self.place.rating)
+                let image = UIImage(named: self.place.rating!)
                 self.ratingButton.setImage(image, for: .normal)
             }
         }

@@ -78,7 +78,7 @@ extension MapViewController : MKMapViewDelegate{
         
         //creo el imageview
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 52, height: 52))
-        imageView.image = self.place.image
+        imageView.image = UIImage(data: self.place.image! as Data)
         
         //añado la imagen a la izquierda
         annotationView?.leftCalloutAccessoryView = imageView

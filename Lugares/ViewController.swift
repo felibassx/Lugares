@@ -8,46 +8,40 @@
 
 
 import UIKit
+import CoreData
 
 class ViewController: UITableViewController {
     
     var places : [Place] = []
+    var fetchResultController : NSFetchedResultsController<Place>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
+        let fetchRequest : NSFetchRequest<Place> = NSFetchRequest(entityName: "Place")
+        let sortDescriptor  = NSSortDescriptor(key: "name", ascending: true)
         
-        //esconder el navigation bar
-        //navigationController?.hidesBarsOnSwipe = true
+        fetchRequest.sortDescriptors = [sortDescriptor]
         
-        var place = Place(name: "Alexanderplatz", type: "Plaza", location: "Alexanderplatz 1 10178, Berlin Germany", telephone: "4534123", website: "http://www.google.com", image: #imageLiteral(resourceName: "alexanderplatz"))
-        self.places.append(place)
+        if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer{
+            
+            let context = container.viewContext
+            
+            self.fetchResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            
+            self.fetchResultController.delegate = self
+            
+            do {
+                try fetchResultController.performFetch()
+                self.places = fetchResultController.fetchedObjects!
+            } catch {
+                print(error.localizedDescription)
+            }
+            
+        }
         
-        place = Place(name: "Atonium", type: "Museo", location: "Boomstraat 8 1000, Brussels Belgium",telephone: "5555555", website: "http://www.google.com", image: #imageLiteral(resourceName: "atomium"))
-        self.places.append(place)
-        
-        place = Place(name: "Big ben", type: "Monumento", location: "London SW1A 0AA, England", telephone: "5555555", website: "http://www.google.com",image: #imageLiteral(resourceName: "bigben"))
-        self.places.append(place)
-        
-        place = Place(name: "Cristo Redentor", type: "Monumento", location: "Parque Nacional da Tijuca - Alto da Boa Vista, Rio de Janeiro - RJ, Brasil",telephone: "5555555", website: "http://www.google.com", image: #imageLiteral(resourceName: "cristoredentor"))
-        self.places.append(place)
-        
-        place = Place(name: "Torre Eiffel", type: "Monumento", location: "5 Avenue Anatole France 75007 Paris France",telephone: "5555555", website: "http://www.google.com", image: #imageLiteral(resourceName: "torreeiffel"))
-        self.places.append(place)
-        
-        place = Place(name: "Gran Muralla China", type: "Monumento", location: "Great Wall, Mutianyu Beijing China",telephone: "5555555", website: "http://www.google.com", image: #imageLiteral(resourceName: "murallachina"))
-        self.places.append(place)
-        
-        place = Place(name: "Torre Pizza", type: "Monumento", location: "Leaning Tower of Pisa 56126 Pisa, Province of Pisa Italy",telephone: "5555555", website: "http://www.google.com",image: #imageLiteral(resourceName: "torrepisa"))
-        self.places.append(place)
-        
-        place = Place(name: "Catedral de Mallorca", type: "Iglesia", location: "La Seu Plaza de la Seu 5 07001 Palma de Mallorca Balearic Isles, Spain",telephone: "5555555", website: "http://www.google.com", image: #imageLiteral(resourceName: "mallorca"))
-        self.places.append(place)
-
-
-
         
     }
     
@@ -91,7 +85,7 @@ class ViewController: UITableViewController {
         //se destruye y la última se genera
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! PlaceCell
         
-        cell.thumbnailImageView.image = place.image
+        cell.thumbnailImageView.image = UIImage(data: place.image! as Data)
         cell.nameLabel.text = place.name
         cell.typeLabel.text = place.type
         cell.locationLabel.text = place.location        
@@ -116,7 +110,7 @@ class ViewController: UITableViewController {
         let shareAction = UITableViewRowAction(style: .default, title: "Compartir") { (action, indexPath) in
             let shareDeflaultText = "Estoy visitando \(place.name) en la app Lugares"
             
-            let activityController = UIActivityViewController(activityItems: [shareDeflaultText, place.image], applicationActivities: nil)
+            let activityController = UIActivityViewController(activityItems: [shareDeflaultText, UIImage(data: (place.image! as Data))!], applicationActivities: nil)
             
             self.present(activityController, animated: true, completion: nil)
             
@@ -126,8 +120,20 @@ class ViewController: UITableViewController {
         
         //borrar
         let deleteAction = UITableViewRowAction(style: .default, title: "Borrar") { (action, indexPath) in
-            self.places.remove(at: indexPath.row)
-            self.tableView.deleteRows(at: [indexPath], with: .fade)
+            if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer{
+                
+                let context = container.viewContext
+                let placeToDelete = self.fetchResultController.object(at: indexPath)
+                
+                context.delete(placeToDelete)
+                
+                do{
+                    try context.save()
+                }catch{
+                    print(error.localizedDescription)
+                }
+            }
+
         }
         
         deleteAction.backgroundColor = UIColor(red: 202.0/255.0, green: 202.0/255.0, blue: 202.0/255.0, alpha: 1.0)
@@ -161,13 +167,58 @@ class ViewController: UITableViewController {
                 
                 if let newPlace = addPlaceVC.place{
                     self.places.append(newPlace)
-                    self.tableView.reloadData()
+                    //self.tableView.reloadData()
                 }
                 
             }
         }
     }
     
-    
 }
+
+//para actualizar la tabla
+extension ViewController : NSFetchedResultsControllerDelegate{
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        self.tableView.beginUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        
+        switch type {
+            
+        case .insert:
+            
+            if let newIndexPath = newIndexPath{
+                self.tableView.insertRows(at: [newIndexPath], with: .fade)
+            }
+            
+        case .delete:
+            if let indexPath = indexPath{
+                self.tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        case .update:
+            if let indexPath = indexPath{
+                self.tableView.reloadRows(at: [indexPath], with: .fade)
+            }
+            
+        case .move:
+            if let indexPath = indexPath, let newIndexPath = newIndexPath{
+                self.tableView.moveRow(at: indexPath, to: newIndexPath)
+            }
+            
+        }
+        
+        self.places = controller.fetchedObjects as! [Place]
+    }
+    
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        self.tableView.endUpdates()
+    }
+
+}
+
+
+
 

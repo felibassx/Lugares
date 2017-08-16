@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddPlaceViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate {
     
@@ -64,10 +65,35 @@ class AddPlaceViewController: UITableViewController, UIImagePickerControllerDele
                     let theImage = self.imageView.image,
                     let rating = self.rating{
         
-            self.place = Place(name: name, type: type, location: direction, telephone: telephone, website: website, image: theImage)
+            //Accedo al appdelegate y accedo al func persistentcontainer
+            if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer{
+                
+                //accedo al contexto
+                let context = container.viewContext
+                self.place = NSEntityDescription.insertNewObject(forEntityName: "Place", into: context) as? Place
+                
+                self.place?.name = name
+                self.place?.type = type
+                self.place?.location = direction
+                self.place?.telephone = telephone
+                self.place?.website = website
+                self.place?.rating = rating
+                self.place?.image = UIImagePNGRepresentation(theImage) as! NSData
+                
+                //guardar el contexto
+                do {
+                    try context.save()
+                } catch{
+                    print("Se ha producido un error al guardar el lugar en coreData.\(error.localizedDescription)")
+                }
+                
+            }
             
-            self.place!.rating = rating
-            print(self.place!.name)
+            
+            
+            
+            
+            
             
             self.performSegue(withIdentifier: "unwindToMainViewController", sender: self)
             
@@ -81,10 +107,9 @@ class AddPlaceViewController: UITableViewController, UIImagePickerControllerDele
             
             self.present(alertController, animated: true, completion: nil)
             
-            
-            
-            
         }
+        
+        
     }
     
     //action rating
