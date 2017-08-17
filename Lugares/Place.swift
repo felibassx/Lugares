@@ -17,7 +17,7 @@ class Place : NSManagedObject {
     @NSManaged var location : String
     @NSManaged var telephone : String?
     @NSManaged var website : String?
-    @NSManaged var image : NSData?
+    @NSManaged var image : Data?
     @NSManaged var rating : String?
     
     

@@ -64,6 +64,19 @@ class DetailViewController: UIViewController {
                 
                 let image = UIImage(named: self.place.rating!)
                 self.ratingButton.setImage(image, for: .normal)
+                
+                
+                //persistir en coredata
+                if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer{
+                    let context = container.viewContext
+                    
+                    do {
+                        try context.save()
+                    } catch {
+                        print("Error: \(error)")
+                    }
+                }
+                
             }
         }
     

@@ -5,7 +5,7 @@
         <attribute name="location" attributeType="String" syncable="YES"/>
         <attribute name="name" attributeType="String" minValueString="5" maxValueString="300" syncable="YES"/>
         <attribute name="rating" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="telephone" optional="YES" attributeType="String" minValueString="6" maxValueString="15" syncable="YES"/>
+        <attribute name="telephone" optional="YES" attributeType="String" minValueString="0" maxValueString="15" syncable="YES"/>
         <attribute name="type" attributeType="String" syncable="YES"/>
         <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
     </entity>

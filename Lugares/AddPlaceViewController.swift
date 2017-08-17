@@ -78,13 +78,12 @@ class AddPlaceViewController: UITableViewController, UIImagePickerControllerDele
                 self.place?.telephone = telephone
                 self.place?.website = website
                 self.place?.rating = rating
-                self.place?.image = UIImagePNGRepresentation(theImage) as! NSData
-                
+                self.place?.image = UIImagePNGRepresentation(theImage)
                 //guardar el contexto
                 do {
                     try context.save()
                 } catch{
-                    print("Se ha producido un error al guardar el lugar en coreData.\(error.localizedDescription)")
+                    print("Se ha producido un error al guardar el lugar en coreData. \(error)")
                 }
                 
             }
