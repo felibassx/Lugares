@@ -235,5 +235,7 @@ class AddPlaceViewController: UITableViewController, UIImagePickerControllerDele
         textField.resignFirstResponder()
         return true
     }
+    
+    
 
 }

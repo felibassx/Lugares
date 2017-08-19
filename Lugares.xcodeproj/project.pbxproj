@@ -21,6 +21,8 @@
 		A96168291F395FC600E2FB27 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96168281F395FC600E2FB27 /* MapKit.framework */; };
 		A961682B1F3961EC00E2FB27 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A961682A1F3961EC00E2FB27 /* MapViewController.swift */; };
 		A99E5E321F3BDF0100724D1D /* AddPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99E5E311F3BDF0100724D1D /* AddPlaceViewController.swift */; };
+		A9C695691F47DF5900F15669 /* TutorialContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C695681F47DF5900F15669 /* TutorialContentViewController.swift */; };
+		A9C6956B1F47E09F00F15669 /* TutorialStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C6956A1F47E09F00F15669 /* TutorialStep.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		A96168281F395FC600E2FB27 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A961682A1F3961EC00E2FB27 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A99E5E311F3BDF0100724D1D /* AddPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlaceViewController.swift; sourceTree = "<group>"; };
+		A9C695681F47DF5900F15669 /* TutorialContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialContentViewController.swift; sourceTree = "<group>"; };
+		A9C6956A1F47E09F00F15669 /* TutorialStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialStep.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 				A961682A1F3961EC00E2FB27 /* MapViewController.swift */,
 				A99E5E311F3BDF0100724D1D /* AddPlaceViewController.swift */,
 				A90B8F801F43BB2A00D14CF4 /* Places.xcdatamodeld */,
+				A9C695681F47DF5900F15669 /* TutorialContentViewController.swift */,
+				A9C6956A1F47E09F00F15669 /* TutorialStep.swift */,
 			);
 			path = Lugares;
 			sourceTree = "<group>";
@@ -178,6 +184,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9C695691F47DF5900F15669 /* TutorialContentViewController.swift in Sources */,
+				A9C6956B1F47E09F00F15669 /* TutorialStep.swift in Sources */,
 				A961681E1F3948AF00E2FB27 /* PlaceCell.swift in Sources */,
 				A90B8F821F43BB2A00D14CF4 /* Places.xcdatamodeld in Sources */,
 				A961680E1F39469800E2FB27 /* ViewController.swift in Sources */,

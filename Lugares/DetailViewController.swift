@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class DetailViewController: UIViewController {
     
@@ -81,6 +82,43 @@ class DetailViewController: UIViewController {
         }
     
     }
+    
+    //LLamar por teléfono
+    func callNumber(phoneNumber:String) {
+        
+        //print(phoneNumber)
+        
+        if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
+            
+            let application:UIApplication = UIApplication.shared
+            if (application.canOpenURL(phoneCallURL)) {
+                application.open(phoneCallURL, options: [:], completionHandler: nil)
+            }
+        }
+    }
+    
+    func sendSmsNumber(phoneNumber:String, messageText:String){
+        if MFMessageComposeViewController.canSendText(){
+            
+            let msgVC = MFMessageComposeViewController()
+            msgVC.body = messageText
+            msgVC.recipients = [phoneNumber]
+            msgVC.messageComposeDelegate = self
+            
+            self.present(msgVC, animated: true, completion: nil)
+        }
+    }
+    
+    func openWebSiteUrl(urlToOpen:String){
+        
+        if let webSiteUrl = URL(string: urlToOpen){
+            let app = UIApplication.shared
+            if app.canOpenURL(webSiteUrl){
+                app.open(webSiteUrl, options: [:], completionHandler: nil)
+            }
+        }
+    
+    }
 
 }
 
@@ -151,10 +189,50 @@ extension DetailViewController : UITableViewDelegate{
             //se selecciono el geo localización
             //llamo al segue
             self.performSegue(withIdentifier: "showMap", sender: nil)
+        case 3:
+            //self.callNumber(phoneNumber: self.place.telephone!)
+            let alertController = UIAlertController(title: "Contactar con \(self.place.name)", message: "¿Cómo quieres contactar con el número \(self.place.telephone!)?", preferredStyle: .actionSheet)
+            
+            //llamar
+            let callAction = UIAlertAction(title: "Llamar", style: .default, handler: { (action) in
+                
+                self.callNumber(phoneNumber: self.place.telephone!)
+                
+            })
+            alertController.addAction(callAction)
+            
+            //enviar sms
+            let smsAction = UIAlertAction(title: "Mensaje", style: .default, handler: { (action) in
+                
+                let msg = "Hola te escribimos desde la app Lugares."
+                self.sendSmsNumber(phoneNumber: self.place.telephone!, messageText: msg)
+            })
+            alertController.addAction(smsAction)
+            
+            
+            //cancelar
+            let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+            alertController.addAction(cancelAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+            
+        case 4:
+            //abrir página web
+            self.openWebSiteUrl(urlToOpen: self.place.website!)
+
             
         default:
             break
         }
     }
 
+}
+
+extension DetailViewController : MFMessageComposeViewControllerDelegate{
+
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        
+        controller.dismiss(animated: true, completion: nil)
+        
+    }
 }
