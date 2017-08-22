@@ -58,12 +58,24 @@ class ViewController: UITableViewController {
         
     }
     
+    
     //esconder el navigation bar
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationController?.hidesBarsOnSwipe = true
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let pageVC = storyboard?.instantiateViewController(withIdentifier: "WalkthroughController") as? TutorialViewController {
+            
+            self.present(pageVC, animated: true, completion: nil)
+            
+        }
+    }
+
  
     
     

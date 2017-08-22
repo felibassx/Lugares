@@ -23,6 +23,7 @@
 		A99E5E321F3BDF0100724D1D /* AddPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99E5E311F3BDF0100724D1D /* AddPlaceViewController.swift */; };
 		A9C695691F47DF5900F15669 /* TutorialContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C695681F47DF5900F15669 /* TutorialContentViewController.swift */; };
 		A9C6956B1F47E09F00F15669 /* TutorialStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C6956A1F47E09F00F15669 /* TutorialStep.swift */; };
+		A9F720081F4A5E740023B2D4 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F720071F4A5E740023B2D4 /* TutorialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		A99E5E311F3BDF0100724D1D /* AddPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlaceViewController.swift; sourceTree = "<group>"; };
 		A9C695681F47DF5900F15669 /* TutorialContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialContentViewController.swift; sourceTree = "<group>"; };
 		A9C6956A1F47E09F00F15669 /* TutorialStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialStep.swift; sourceTree = "<group>"; };
+		A9F720071F4A5E740023B2D4 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				A90B8F801F43BB2A00D14CF4 /* Places.xcdatamodeld */,
 				A9C695681F47DF5900F15669 /* TutorialContentViewController.swift */,
 				A9C6956A1F47E09F00F15669 /* TutorialStep.swift */,
+				A9F720071F4A5E740023B2D4 /* TutorialViewController.swift */,
 			);
 			path = Lugares;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				A90B8F821F43BB2A00D14CF4 /* Places.xcdatamodeld in Sources */,
 				A961680E1F39469800E2FB27 /* ViewController.swift in Sources */,
 				A96168241F39497800E2FB27 /* ReviewViewController.swift in Sources */,
+				A9F720081F4A5E740023B2D4 /* TutorialViewController.swift in Sources */,
 				A99E5E321F3BDF0100724D1D /* AddPlaceViewController.swift in Sources */,
 				A96168231F39497800E2FB27 /* PlaceDetailViewCell.swift in Sources */,
 				A961680C1F39469800E2FB27 /* AppDelegate.swift in Sources */,

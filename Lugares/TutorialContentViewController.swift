@@ -14,6 +14,8 @@ class TutorialContentViewController: UIViewController {
     @IBOutlet var contentImageView: UIImageView!
     @IBOutlet var contentLabel: UILabel!
     
+    @IBOutlet var pageControl: UIPageControl!
+    
     var tutorialStep : TutorialStep!
     
     override func viewDidLoad() {
@@ -22,6 +24,8 @@ class TutorialContentViewController: UIViewController {
         self.titleLabel.text = self.tutorialStep.heading
         self.contentImageView.image = self.tutorialStep.image
         self.contentLabel.text = self.tutorialStep.content
+        
+        self.pageControl.currentPage = self.tutorialStep.index
         
     }
 
