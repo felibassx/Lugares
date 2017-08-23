@@ -37,6 +37,14 @@ class TutorialViewController: UIPageViewController {
         super.didReceiveMemoryWarning()
         
     }
+    
+    func forward(toIndex: Int){
+        
+        if let nextVC = self.PageViewController(atIndex: toIndex + 1){
+            self.setViewControllers([nextVC], direction: .forward, animated: true, completion: nil)
+        }
+    
+    }
 
 
 }

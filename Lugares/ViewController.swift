@@ -55,7 +55,20 @@ class ViewController: UITableViewController {
             
         }
         
+        //TODO:Cargar la info por defecto
+        let defaults = UserDefaults.standard
+        if !defaults.bool(forKey: "hasLoadedDefaultInfo"){
+            //CArgar la info por defecto
+            loadDefaultData()
+            
+            defaults.set(true, forKey: "hasLoadedDefaultInfo")
+        }
         
+        
+    }
+    
+    func loadDefaultData(){
+        //TODO: data por defecto de la app
     }
     
     
@@ -69,12 +82,23 @@ class ViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        //compruebo si el tutorial fue visto
+        let defaults = UserDefaults.standard
+        let hasViewedTutorial = defaults.bool(forKey: "hasViewedTutorial")
+        
+        if hasViewedTutorial{
+            return
+        }
+        
         if let pageVC = storyboard?.instantiateViewController(withIdentifier: "WalkthroughController") as? TutorialViewController {
             
             self.present(pageVC, animated: true, completion: nil)
             
         }
     }
+    
+    //TODO: agregar botón omitir
+    //TODO: crear botón ver tutorial
 
  
     

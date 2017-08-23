@@ -742,6 +742,20 @@
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="LeO-cG-E8b">
                                 <rect key="frame" x="168" y="580" width="39" height="37"/>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRN-Na-OiQ">
+                                <rect key="frame" x="254" y="611" width="105" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="B6t-tL-Vhz"/>
+                                    <constraint firstAttribute="width" constant="105" id="gdu-GL-eAs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Siguiente">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextPress:" destination="xwh-AY-NIl" eventType="touchUpInside" id="3qw-eu-2AB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.51020408163265307" green="0.020408163265306145" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -749,6 +763,8 @@
                             <constraint firstItem="xuV-rP-q9B" firstAttribute="trailing" secondItem="brZ-6h-bNi" secondAttribute="trailingMargin" id="6Hf-C4-6ch"/>
                             <constraint firstItem="BX4-63-mlh" firstAttribute="centerX" secondItem="brZ-6h-bNi" secondAttribute="centerX" id="DTZ-mQ-gjB"/>
                             <constraint firstItem="BX4-63-mlh" firstAttribute="trailing" secondItem="brZ-6h-bNi" secondAttribute="trailingMargin" id="XAd-P4-4xi"/>
+                            <constraint firstItem="oRN-Na-OiQ" firstAttribute="trailing" secondItem="brZ-6h-bNi" secondAttribute="trailingMargin" id="XIx-7b-cMb"/>
+                            <constraint firstItem="1ox-Kh-C11" firstAttribute="top" secondItem="oRN-Na-OiQ" secondAttribute="bottom" constant="20" id="asK-cS-vz9"/>
                             <constraint firstItem="BX4-63-mlh" firstAttribute="top" secondItem="dxa-hf-AtW" secondAttribute="bottom" constant="20" id="dKh-yG-Txn"/>
                             <constraint firstItem="dxa-hf-AtW" firstAttribute="centerX" secondItem="brZ-6h-bNi" secondAttribute="centerX" id="fOd-KY-P07"/>
                             <constraint firstItem="LeO-cG-E8b" firstAttribute="centerX" secondItem="brZ-6h-bNi" secondAttribute="centerX" id="khW-FJ-oj3"/>
@@ -761,6 +777,7 @@
                     <connections>
                         <outlet property="contentImageView" destination="BX4-63-mlh" id="ddR-l1-jtL"/>
                         <outlet property="contentLabel" destination="xuV-rP-q9B" id="mbh-JO-qbg"/>
+                        <outlet property="nextButton" destination="oRN-Na-OiQ" id="uRW-PI-Psr"/>
                         <outlet property="pageControl" destination="LeO-cG-E8b" id="W1v-Wv-dGr"/>
                         <outlet property="titleLabel" destination="dxa-hf-AtW" id="nLP-FX-Crl"/>
                     </connections>
