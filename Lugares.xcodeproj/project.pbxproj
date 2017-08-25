@@ -24,6 +24,11 @@
 		A9C695691F47DF5900F15669 /* TutorialContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C695681F47DF5900F15669 /* TutorialContentViewController.swift */; };
 		A9C6956B1F47E09F00F15669 /* TutorialStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C6956A1F47E09F00F15669 /* TutorialStep.swift */; };
 		A9F720081F4A5E740023B2D4 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F720071F4A5E740023B2D4 /* TutorialViewController.swift */; };
+		A9F720101F4E5DE70023B2D4 /* AboutUs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F7200E1F4E5DE70023B2D4 /* AboutUs.storyboard */; };
+		A9F720121F4E5E2D0023B2D4 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F720111F4E5E2D0023B2D4 /* Discover.storyboard */; };
+		A9F720151F4E5E4B0023B2D4 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F720131F4E5E4B0023B2D4 /* Tutorial.storyboard */; };
+		A9F720171F4FA3430023B2D4 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F720161F4FA3430023B2D4 /* AboutUsViewController.swift */; };
+		A9F720191F4FB0B70023B2D4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F720181F4FB0B70023B2D4 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +51,11 @@
 		A9C695681F47DF5900F15669 /* TutorialContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialContentViewController.swift; sourceTree = "<group>"; };
 		A9C6956A1F47E09F00F15669 /* TutorialStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialStep.swift; sourceTree = "<group>"; };
 		A9F720071F4A5E740023B2D4 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		A9F7200F1F4E5DE70023B2D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AboutUs.storyboard; sourceTree = "<group>"; };
+		A9F720111F4E5E2D0023B2D4 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		A9F720141F4E5E4B0023B2D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Tutorial.storyboard; sourceTree = "<group>"; };
+		A9F720161F4FA3430023B2D4 /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		A9F720181F4FB0B70023B2D4 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +97,9 @@
 				A96168211F39497800E2FB27 /* ReviewViewController.swift */,
 				A961681D1F3948AF00E2FB27 /* PlaceCell.swift */,
 				A961680F1F39469800E2FB27 /* Main.storyboard */,
+				A9F720131F4E5E4B0023B2D4 /* Tutorial.storyboard */,
+				A9F720111F4E5E2D0023B2D4 /* Discover.storyboard */,
+				A9F7200E1F4E5DE70023B2D4 /* AboutUs.storyboard */,
 				A96168121F39469800E2FB27 /* Assets.xcassets */,
 				A96168141F39469800E2FB27 /* LaunchScreen.storyboard */,
 				A96168171F39469800E2FB27 /* Info.plist */,
@@ -97,6 +110,8 @@
 				A9C695681F47DF5900F15669 /* TutorialContentViewController.swift */,
 				A9C6956A1F47E09F00F15669 /* TutorialStep.swift */,
 				A9F720071F4A5E740023B2D4 /* TutorialViewController.swift */,
+				A9F720161F4FA3430023B2D4 /* AboutUsViewController.swift */,
+				A9F720181F4FB0B70023B2D4 /* WebViewController.swift */,
 			);
 			path = Lugares;
 			sourceTree = "<group>";
@@ -174,8 +189,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9F720101F4E5DE70023B2D4 /* AboutUs.storyboard in Resources */,
 				A96168161F39469800E2FB27 /* LaunchScreen.storyboard in Resources */,
+				A9F720121F4E5E2D0023B2D4 /* Discover.storyboard in Resources */,
 				A96168131F39469800E2FB27 /* Assets.xcassets in Resources */,
+				A9F720151F4E5E4B0023B2D4 /* Tutorial.storyboard in Resources */,
 				A96168111F39469800E2FB27 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +209,7 @@
 				A9C6956B1F47E09F00F15669 /* TutorialStep.swift in Sources */,
 				A961681E1F3948AF00E2FB27 /* PlaceCell.swift in Sources */,
 				A90B8F821F43BB2A00D14CF4 /* Places.xcdatamodeld in Sources */,
+				A9F720171F4FA3430023B2D4 /* AboutUsViewController.swift in Sources */,
 				A961680E1F39469800E2FB27 /* ViewController.swift in Sources */,
 				A96168241F39497800E2FB27 /* ReviewViewController.swift in Sources */,
 				A9F720081F4A5E740023B2D4 /* TutorialViewController.swift in Sources */,
@@ -199,6 +218,7 @@
 				A961680C1F39469800E2FB27 /* AppDelegate.swift in Sources */,
 				A96168261F3949B500E2FB27 /* Place.swift in Sources */,
 				A96168221F39497800E2FB27 /* DetailViewController.swift in Sources */,
+				A9F720191F4FB0B70023B2D4 /* WebViewController.swift in Sources */,
 				A961682B1F3961EC00E2FB27 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +240,22 @@
 				A96168151F39469800E2FB27 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A9F7200E1F4E5DE70023B2D4 /* AboutUs.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9F7200F1F4E5DE70023B2D4 /* Base */,
+			);
+			name = AboutUs.storyboard;
+			sourceTree = "<group>";
+		};
+		A9F720131F4E5E4B0023B2D4 /* Tutorial.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9F720141F4E5E4B0023B2D4 /* Base */,
+			);
+			name = Tutorial.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -326,6 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G28EKQSF7A;
 				INFOPLIST_FILE = Lugares/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cl.kafecode.Lugares;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -339,6 +376,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G28EKQSF7A;
 				INFOPLIST_FILE = Lugares/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cl.kafecode.Lugares;
 				PRODUCT_NAME = "$(TARGET_NAME)";

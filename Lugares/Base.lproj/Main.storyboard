@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6jo-FE-68S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kZY-Ld-WQV">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -99,12 +99,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Nh-dO-72o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="403" y="-50"/>
+            <point key="canvasLocation" x="1341.5999999999999" y="-50.824587706146929"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="vVf-Ti-ne6">
             <objects>
-                <viewController id="hJS-jC-hOB" customClass="DetailViewController" customModule="Lugares" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="hJS-jC-hOB" customClass="DetailViewController" customModule="Lugares" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UPa-es-Nwj"/>
                         <viewControllerLayoutGuide type="bottom" id="gMg-dh-a7S"/>
@@ -120,7 +120,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vfB-53-39V">
-                                <rect key="frame" x="0.0" y="300" width="375" height="367"/>
+                                <rect key="frame" x="0.0" y="300" width="375" height="318"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlaceDetailViewCell" id="IbE-DM-vmX" customClass="PlaceDetailViewCell" customModule="Lugares" customModuleProvider="target">
@@ -210,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ka-9V-TOI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1147.5" y="-51.760563380281688"/>
+            <point key="canvasLocation" x="2085.5999999999999" y="-52.623688155922046"/>
         </scene>
         <!--Review View Controller-->
         <scene sceneID="BWI-ew-IjT">
@@ -336,7 +336,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ma2-d3-TSF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Zpf-1M-hrO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1861.875" y="-49.647887323943664"/>
+            <point key="canvasLocation" x="2800.8000000000002" y="-49.925037481259373"/>
         </scene>
         <!--Add Place View Controller-->
         <scene sceneID="JlH-ND-cXs">
@@ -677,10 +677,11 @@
             </objects>
             <point key="canvasLocation" x="2776.8000000000002" y="704.79760119940033"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Favoritos-->
         <scene sceneID="OEN-E1-Ltw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="6jo-FE-68S" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favoritos" image="favorite" id="EVM-Sq-Lzl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" alpha="0.5" contentMode="scaleToFill" id="OTr-1q-E3J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -693,98 +694,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yHO-wJ-2WU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-354.375" y="-49.647887323943664"/>
-        </scene>
-        <!--Tutorial View Controller-->
-        <scene sceneID="9RL-Ak-roD">
-            <objects>
-                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="ZVg-RG-rN0" customClass="TutorialViewController" customModule="Lugares" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Lm-HG-NJR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="0.0" y="715"/>
-        </scene>
-        <!--Tutorial Content View Controller-->
-        <scene sceneID="4B9-1N-sgs">
-            <objects>
-                <viewController storyboardIdentifier="WalkthroughPageContent" id="xwh-AY-NIl" customClass="TutorialContentViewController" customModule="Lugares" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NTs-ka-Cll"/>
-                        <viewControllerLayoutGuide type="bottom" id="1ox-Kh-C11"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="brZ-6h-bNi" customClass="tut">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo del Tutorial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxa-hf-AtW">
-                                <rect key="frame" x="115.5" y="28" width="144.5" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="KLy-LQ-plT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tuto-intro-1" translatesAutoresizingMaskIntoConstraints="NO" id="BX4-63-mlh">
-                                <rect key="frame" x="16" y="98" width="343" height="343"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="BX4-63-mlh" secondAttribute="height" multiplier="1:1" id="WKg-Cr-upz"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aquí la descripción del tutorial." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuV-rP-q9B">
-                                <rect key="frame" x="16" y="449" width="343" height="110"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="7Hb-Of-3gN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="LeO-cG-E8b">
-                                <rect key="frame" x="168" y="580" width="39" height="37"/>
-                            </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRN-Na-OiQ">
-                                <rect key="frame" x="254" y="611" width="105" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="B6t-tL-Vhz"/>
-                                    <constraint firstAttribute="width" constant="105" id="gdu-GL-eAs"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
-                                <state key="normal" title="Siguiente">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="nextPress:" destination="xwh-AY-NIl" eventType="touchUpInside" id="3qw-eu-2AB"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.51020408163265307" green="0.020408163265306145" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="BX4-63-mlh" firstAttribute="leading" secondItem="brZ-6h-bNi" secondAttribute="leadingMargin" id="157-5d-XuB"/>
-                            <constraint firstItem="xuV-rP-q9B" firstAttribute="trailing" secondItem="brZ-6h-bNi" secondAttribute="trailingMargin" id="6Hf-C4-6ch"/>
-                            <constraint firstItem="BX4-63-mlh" firstAttribute="centerX" secondItem="brZ-6h-bNi" secondAttribute="centerX" id="DTZ-mQ-gjB"/>
-                            <constraint firstItem="BX4-63-mlh" firstAttribute="trailing" secondItem="brZ-6h-bNi" secondAttribute="trailingMargin" id="XAd-P4-4xi"/>
-                            <constraint firstItem="oRN-Na-OiQ" firstAttribute="trailing" secondItem="brZ-6h-bNi" secondAttribute="trailingMargin" id="XIx-7b-cMb"/>
-                            <constraint firstItem="1ox-Kh-C11" firstAttribute="top" secondItem="oRN-Na-OiQ" secondAttribute="bottom" constant="20" id="asK-cS-vz9"/>
-                            <constraint firstItem="BX4-63-mlh" firstAttribute="top" secondItem="dxa-hf-AtW" secondAttribute="bottom" constant="20" id="dKh-yG-Txn"/>
-                            <constraint firstItem="dxa-hf-AtW" firstAttribute="centerX" secondItem="brZ-6h-bNi" secondAttribute="centerX" id="fOd-KY-P07"/>
-                            <constraint firstItem="LeO-cG-E8b" firstAttribute="centerX" secondItem="brZ-6h-bNi" secondAttribute="centerX" id="khW-FJ-oj3"/>
-                            <constraint firstItem="xuV-rP-q9B" firstAttribute="leading" secondItem="brZ-6h-bNi" secondAttribute="leadingMargin" id="pgN-HK-BGk"/>
-                            <constraint firstItem="xuV-rP-q9B" firstAttribute="top" secondItem="BX4-63-mlh" secondAttribute="bottom" constant="8" id="qri-Fj-H11"/>
-                            <constraint firstItem="1ox-Kh-C11" firstAttribute="top" secondItem="LeO-cG-E8b" secondAttribute="bottom" constant="50" id="wwF-ep-EmR"/>
-                            <constraint firstItem="dxa-hf-AtW" firstAttribute="top" secondItem="NTs-ka-Cll" secondAttribute="bottom" constant="8" id="yS7-om-AhW"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="contentImageView" destination="BX4-63-mlh" id="ddR-l1-jtL"/>
-                        <outlet property="contentLabel" destination="xuV-rP-q9B" id="mbh-JO-qbg"/>
-                        <outlet property="nextButton" destination="oRN-Na-OiQ" id="uRW-PI-Psr"/>
-                        <outlet property="pageControl" destination="LeO-cG-E8b" id="W1v-Wv-dGr"/>
-                        <outlet property="titleLabel" destination="dxa-hf-AtW" id="nLP-FX-Crl"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EXf-1i-zxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2.3999999999999999" y="1367.7661169415294"/>
+            <point key="canvasLocation" x="584.79999999999995" y="-49.925037481259373"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wht-43-K2z">
@@ -802,17 +712,72 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ojK-MN-VE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924" y="716.49175412293857"/>
+            <point key="canvasLocation" x="1049" y="716"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Xdv-dR-AAc">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="kZY-Ld-WQV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="eZS-EW-fCm">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6jo-FE-68S" kind="relationship" relationship="viewControllers" id="WaK-eh-WYK"/>
+                        <segue destination="vqI-EA-3wJ" kind="relationship" relationship="viewControllers" id="ij4-xe-f0e"/>
+                        <segue destination="XGg-3i-Fem" kind="relationship" relationship="viewControllers" id="n3T-24-CQu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tbo-pd-ECv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-354.39999999999998" y="-49.925037481259373"/>
+        </scene>
+        <!--AboutUs-->
+        <scene sceneID="w2C-Nw-ZM3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AboutUs" id="XGg-3i-Fem" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="YHm-uB-NwH"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nq4-Z7-P3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-586" y="417"/>
+        </scene>
+        <!--Discover-->
+        <scene sceneID="P9y-RM-xD9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Discover" id="vqI-EA-3wJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="1KC-Lx-3AE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6u0-wK-MmV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-122" y="416"/>
+        </scene>
+        <!--WalkthroughController-->
+        <scene sceneID="eyT-Ud-lzS">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="WalkthroughController" storyboardName="Tutorial" referencedIdentifier="WalkthroughController" id="m2F-dK-llp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZyO-qw-NwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-549" y="542"/>
+        </scene>
+        <!--WalkthroughPageContent-->
+        <scene sceneID="9FN-La-EpU">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="WalkthroughPageContent" storyboardName="Tutorial" referencedIdentifier="WalkthroughPageContent" id="KO6-nm-ykO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="le7-Km-Cft" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-205" y="542"/>
         </scene>
     </scenes>
     <resources>
         <image name="close" width="64" height="64"/>
         <image name="comida" width="16" height="16"/>
         <image name="dislike" width="64" height="64"/>
+        <image name="favorite" width="25" height="25"/>
         <image name="good" width="128" height="128"/>
         <image name="great" width="128" height="128"/>
         <image name="placeholder-avatar" width="16" height="16"/>
         <image name="rating" width="128" height="128"/>
-        <image name="tuto-intro-1" width="188" height="146"/>
     </resources>
 </document>

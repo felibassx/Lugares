@@ -19,12 +19,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Configurar la barra de navegacion
-        UINavigationBar.appearance().barTintColor = UIColor(red: 0.0/255.0, green: 113.0/255.0, blue: 115.0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().barTintColor = UIColor(red: 35.0/255.0, green: 0.0/255.0, blue: 65.0/255.0, alpha: 1.0)
         
         UINavigationBar.appearance().tintColor = UIColor.white
+        
         if let barfont = UIFont(name: "Avenir-Light", size: 22.0){
             UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: barfont]
         }
+        
+        UITabBar.appearance().tintColor = UIColor.white
+        UITabBar.appearance().barTintColor = UIColor(red: 9.0/255.0, green: 9.0/255.0, blue: 9.0/255.0, alpha: 1.0)
+        
+        //imagen de seleccion
+        //UITabBar.appearance().selectionIndicatorImage = UIImage(named: "tabbaritem-selected")
+
         
         
         return true
