@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tutorial View Controller-->
+        <scene sceneID="9RL-Ak-roD">
+            <objects>
+                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="ZVg-RG-rN0" customClass="TutorialViewController" customModule="Lugares" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Lm-HG-NJR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1913" y="1514"/>
+        </scene>
+        <!--Tutorial Content View Controller-->
+        <scene sceneID="4B9-1N-sgs">
+            <objects>
+                <viewController storyboardIdentifier="WalkthroughPageContent" id="xwh-AY-NIl" customClass="TutorialContentViewController" customModule="Lugares" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NTs-ka-Cll"/>
+                        <viewControllerLayoutGuide type="bottom" id="1ox-Kh-C11"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="brZ-6h-bNi" customClass="tut">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo del Tutorial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxa-hf-AtW">
+                                <rect key="frame" x="115.5" y="28" width="144.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KLy-LQ-plT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tuto-intro-1" translatesAutoresizingMaskIntoConstraints="NO" id="BX4-63-mlh">
+                                <rect key="frame" x="16" y="98" width="343" height="343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BX4-63-mlh" secondAttribute="height" multiplier="1:1" id="WKg-Cr-upz"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aquí la descripción del tutorial." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuV-rP-q9B">
+                                <rect key="frame" x="16" y="449" width="343" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="7Hb-Of-3gN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="LeO-cG-E8b">
+                                <rect key="frame" x="168" y="580" width="39" height="37"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRN-Na-OiQ">
+                                <rect key="frame" x="254" y="611" width="105" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="B6t-tL-Vhz"/>
+                                    <constraint firstAttribute="width" constant="105" id="gdu-GL-eAs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Siguiente">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextPress:" destination="xwh-AY-NIl" eventType="touchUpInside" id="3qw-eu-2AB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.51020408163265307" green="0.020408163265306145" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BX4-63-mlh" firstAttribute="leading" secondItem="brZ-6h-bNi" secondAttribute="leadingMargin" id="157-5d-XuB"/>
+                            <constraint firstItem="xuV-rP-q9B" firstAttribute="trailing" secondItem="brZ-6h-bNi" secondAttribute="trailingMargin" id="6Hf-C4-6ch"/>
+                            <constraint firstItem="BX4-63-mlh" firstAttribute="centerX" secondItem="brZ-6h-bNi" secondAttribute="centerX" id="DTZ-mQ-gjB"/>
+                            <constraint firstItem="BX4-63-mlh" firstAttribute="trailing" secondItem="brZ-6h-bNi" secondAttribute="trailingMargin" id="XAd-P4-4xi"/>
+                            <constraint firstItem="oRN-Na-OiQ" firstAttribute="trailing" secondItem="brZ-6h-bNi" secondAttribute="trailingMargin" id="XIx-7b-cMb"/>
+                            <constraint firstItem="1ox-Kh-C11" firstAttribute="top" secondItem="oRN-Na-OiQ" secondAttribute="bottom" constant="20" id="asK-cS-vz9"/>
+                            <constraint firstItem="BX4-63-mlh" firstAttribute="top" secondItem="dxa-hf-AtW" secondAttribute="bottom" constant="20" id="dKh-yG-Txn"/>
+                            <constraint firstItem="dxa-hf-AtW" firstAttribute="centerX" secondItem="brZ-6h-bNi" secondAttribute="centerX" id="fOd-KY-P07"/>
+                            <constraint firstItem="LeO-cG-E8b" firstAttribute="centerX" secondItem="brZ-6h-bNi" secondAttribute="centerX" id="khW-FJ-oj3"/>
+                            <constraint firstItem="xuV-rP-q9B" firstAttribute="leading" secondItem="brZ-6h-bNi" secondAttribute="leadingMargin" id="pgN-HK-BGk"/>
+                            <constraint firstItem="xuV-rP-q9B" firstAttribute="top" secondItem="BX4-63-mlh" secondAttribute="bottom" constant="8" id="qri-Fj-H11"/>
+                            <constraint firstItem="1ox-Kh-C11" firstAttribute="top" secondItem="LeO-cG-E8b" secondAttribute="bottom" constant="50" id="wwF-ep-EmR"/>
+                            <constraint firstItem="dxa-hf-AtW" firstAttribute="top" secondItem="NTs-ka-Cll" secondAttribute="bottom" constant="8" id="yS7-om-AhW"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
+                    <connections>
+                        <outlet property="contentImageView" destination="BX4-63-mlh" id="ddR-l1-jtL"/>
+                        <outlet property="contentLabel" destination="xuV-rP-q9B" id="mbh-JO-qbg"/>
+                        <outlet property="nextButton" destination="oRN-Na-OiQ" id="uRW-PI-Psr"/>
+                        <outlet property="pageControl" destination="LeO-cG-E8b" id="W1v-Wv-dGr"/>
+                        <outlet property="titleLabel" destination="dxa-hf-AtW" id="nLP-FX-Crl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EXf-1i-zxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1217" y="1513"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tuto-intro-1" width="188" height="146"/>
+    </resources>
+</document>
